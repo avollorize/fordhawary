@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>Flowers</title>
+    <style>
+        /* Gaya tombol */
+        .button {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button button {
+            background-color: #6bf0ff; /* Warna latar belakang solid */
+            color: black; /* Warna teks hitam */
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            animation: glowing 2s infinite alternate; /* Animasi glowing */
+            text-decoration: none; /* Hilangkan garis bawah dari tautan */
+        }
+
+        .button button:hover {
+            background-color: #6bf0ff; /* Warna latar belakang saat hover */
+            box-shadow: 0 0 10px 5px rgba(107, 240, 255, 0.7); /* Efek glowing saat hover */
+        }
+
+        .button a {
+            text-decoration: none; /* Hilangkan garis bawah dari tautan */
+            color: black; /* Warna teks hitam */
+        }
+
+        /* Animasi glowing */
+        @keyframes glowing {
+            from {
+                box-shadow: 0 0 10px 0 rgba(107, 240, 255, 0.7);
+            }
+            to {
+                box-shadow: 0 0 20px 10px rgba(107, 240, 255, 0.7);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="greetings">
+        <span>V</span>
+        <span>A</span>
+        <span>L</span>
+        <span>E</span>
+        <span>N</span>
+        <span>T</span>
+        <span>I</span>
+        <span>N</span>
+        <span>E</span>
+        <span>'S</span>
+        <span>D</span>
+        <span>A</span>
+        <span>Y</span>
+        <span>
+            <br></br>
+        </span>
+        <span>F</span>
+        <span>A</span>
+        <span>N</span>
+        <span>Y</span>
+    </div>
+    <div class="description">
+        <span>Do you want some gift?</span>
+    </div>
+    <!-- Bagian tombol yang diperbarui -->
+    <div class="button">
+        <button><a href="flower.html">Yes</a></button>
+        <button><a href="no.html">No, thanks</a></button>
+    </div>
+</body>
+</html>

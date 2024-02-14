@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nolak nih?</title>
+<style>
+  body {
+    background: linear-gradient(135deg, #393e46, #1a1a1a);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 20px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* tambahkan transisi untuk transformasi */
+    text-decoration: none; /* Hilangkan underline */
+  }
+
+  .button:hover {
+    background-color: #333;
+  }
+
+  .button.mau-deh {
+    background-color: #3897f0;
+    color: #fff;
+  }
+
+  .button.ga-mau {
+    background-color: #ff6666;
+    color: #fff;
+  }
+
+  /* Efek membesar ketika tombol "Mau Deh" diklik */
+  .mau-deh.animate {
+    transform: scale(1.2); /* Mengubah ukuran tombol menjadi 120% */
+  }
+</style>
+</head>
+<body>
+
+<h1>yakin nih?</h1>
+
+<div class="buttons">
+  <a id="mau-deh" href="flower.html" class="button mau-deh">Mau Deh</a>
+  <button id="ga-mau" class="button ga-mau">Ga Mau!</button>
+</div>
+
+<script>
+  const buttonGaMau = document.getElementById('ga-mau');
+  const buttonMauDeh = document.getElementById('mau-deh');
+
+  buttonGaMau.addEventListener('click', () => {
+    // Menambahkan kelas "animate" untuk memicu efek membesar
+    buttonMauDeh.classList.add('animate');
+    // Menghapus kelas "animate" setelah 200ms untuk memulihkan ke ukuran asli
+    setTimeout(() => {
+      buttonMauDeh.classList.remove('animate');
+    }, 200);
+    
+    // Logika perpindahan posisi tombol "Ga Mau!"
+    const randomX = Math.floor(Math.random() * window.innerWidth);
+    const randomY = Math.floor(Math.random() * window.innerHeight);
+    buttonGaMau.style.position = 'absolute';
+    buttonGaMau.style.left = randomX + 'px';
+    buttonGaMau.style.top = randomY + 'px';
+  });
+</script>
+<audio autoplay loop>
+  <source src="img/valentine.mp3" type="audio/mp3">
+</audio>
+</body>
+</html>

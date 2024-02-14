@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="img/flowers.png" type="image/x-icon">
+    <title>flowers</title>
+    <style>
+        /* Tambahkan gaya CSS sesuai kebutuhan Anda */
+    </style>
+</head>
+<body class="container">
+    <div class="night"></div>
+    <div class="flowers">
+        <!-- Struktur bunga dan rumput di sini -->
+    </div>
+    <script>
+        // Tambahkan skrip JavaScript sesuai kebutuhan Anda
+        var bgm = document.getElementById("bgm");
+        var playPauseBtn = document.getElementById("playPauseBtn");
+        
+        playPauseBtn.addEventListener("click", function() {
+            if (bgm.paused) {
+                bgm.play();
+                playPauseBtn.textContent = "Pause";
+            } else {
+                bgm.pause();
+                playPauseBtn.textContent = "Play";
+            }
+        });
+    </script>
+    <audio id="bgm" loop>
+        <source src="img/valentine.mp3" type="audio/mp3">
+    </audio>
+    <button id="playPauseBtn">Play/Pause</button>
+</body>
+</html>
